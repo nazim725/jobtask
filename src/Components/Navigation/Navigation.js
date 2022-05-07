@@ -2,6 +2,7 @@ import React, { memo } from 'react'
 import './Navigation.css'
 import profile from '../../images/Ellipse 1.png'
 
+
 const Navigation = memo(() => {
   return (
     <div className="navigation flex">
@@ -54,7 +55,7 @@ const Navigation = memo(() => {
         </div>
       </div>
       {/* -------- */}
-      <div>
+      <div className="input-form">
         <form>
           <input className="input-box" type="search" placeholder="Search" />
         </form>
@@ -112,6 +113,7 @@ const Navigation = memo(() => {
           </div>
         </div>
       </div>
+     
     </div>
   )
 })

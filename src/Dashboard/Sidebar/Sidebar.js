@@ -7,7 +7,7 @@ import settings from '../../images/settings.png'
 
 const Sidebar = memo(() => {
   return (
-    <div style={{ width: '260px' }}>
+    <div className='sidebar'>
       <div className="home flex">
         <img src={home} alt="" />
         <span className="ml-2"> Dashboard</span>

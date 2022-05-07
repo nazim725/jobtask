@@ -43,3 +43,24 @@ form{
 .profile{
     margin-left: 487.46px;
 }
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .drop1{
+        margin-top: 12px;
+        width: 110px;
+    }
+    .input-form form{
+        margin-left: 2px; 
+    }
+    .profile{
+        margin-left:50px;
+    }
+    
+    
+}
+@media screen and (max-width:767px) {
+    .input-form{
+        display: none;
+    }
+   
+    
+}

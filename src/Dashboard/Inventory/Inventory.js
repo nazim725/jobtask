@@ -1,5 +1,9 @@
 import React, { memo } from 'react'
 import './Inventory.css'
+import img1 from '../../images/home.png'
+import img2 from '../../images/files.png'
+import img3 from '../../images/google-docs.png'
+import img4 from '../../images/settings.png'
 
 const Inventory = memo(() => {
   const data = [
@@ -77,7 +81,7 @@ const Inventory = memo(() => {
     },
   ]
   return (
-    <div>
+    <div style={{ background: '#F2F2F3', marginBottom: '50px' }}>
       <h4 className="title">Inventory</h4>
       <div className="inventory">
         <form>
@@ -88,25 +92,25 @@ const Inventory = memo(() => {
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
               <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr style={{ background: '#FDF4ED' }}>
-                  <th scope="col" class="px-6 py-3">
+                  <th scope="col" class="px-6 py-3 checkbox">
                     <input type="checkbox" />
                   </th>
-                  <th scope="col" class="px-6 py-3">
-                    Date Updated <i class="fas fa-arrow-down"></i>
+                  <th scope="col" class="px-6 py-3 updateDate">
+                    Date Updated <i class="fas fa-arrow-down "></i>
                   </th>
                   <th scope="col" class="px-6 py-3">
                     Title <i class="fas fa-arrows-alt-v"></i>
                   </th>
-                  <th scope="col" class="px-6 py-3">
+                  <th scope="col" class="px-6 py-3 details">
                     Details
                   </th>
-                  <th scope="col" class="px-6 py-3">
+                  <th scope="col" class="px-6 py-3 status">
                     Status
                   </th>
                   <th scope="col" class="px-6 py-3">
                     Quantity
                   </th>
-                  <th scope="col" class="px-6 py-3">
+                  <th scope="col" class="px-6 py-3 price">
                     Unit Price
                   </th>
                   <th scope="col" class="px-6 py-3">
@@ -117,16 +121,16 @@ const Inventory = memo(() => {
               <tbody>
                 {data.map((dt) => (
                   <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                    <td className="px-6 py-4">
+                    <td className="px-6 py-4 checkbox">
                       {' '}
                       <input type="checkbox" />
                     </td>
-                    <td className="px-6 py-4">{dt.dateUpdated}</td>
+                    <td className="px-6 py-4 updateDate">{dt.dateUpdated}</td>
                     <td className="px-6 py-4">{dt.title}</td>
-                    <td className="px-6 py-4">{dt.details}</td>
-                    <td className="px-6 py-4">{dt.status}</td>
+                    <td className="px-6 py-4 details">{dt.details}</td>
+                    <td className="px-6 py-4 status">{dt.status}</td>
                     <td className="px-6 py-4">{dt.Quantity}</td>
-                    <td className="px-6 py-4">{dt.unitPrice}</td>
+                    <td className="px-6 py-4 price">{dt.unitPrice}</td>
                     <td className="px-6 py-4">{dt.amount}</td>
                   </tr>
                 ))}
@@ -200,6 +204,15 @@ const Inventory = memo(() => {
               <button className="next-button font-bold">&gt; </button>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="footer-icon">
+        <div className="footer ">
+          <img src={img1} alt="" />
+          <img src={img2} alt="" />
+          <img src={img3} alt="" />
+          <img src={img4} alt="" />
         </div>
       </div>
     </div>
